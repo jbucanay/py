@@ -1,3 +1,8 @@
-import os
+#!/usr/bin/env python3
 
-print(os.name)
+# import platform
+
+
+# print("This is python version {}".format(platform.python_version()))
+
+import urllib.request
