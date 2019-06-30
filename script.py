@@ -1,4 +1,4 @@
-hungry = True
-x = 'Feed the bear now!' if hungry else 'do not feed the bear'
 
-print(x)
+a = set("im working hard to learn python")
+b = set("not really lol")
+print(a | b)
