@@ -1,8 +1,4 @@
-#!/usr/bin/env python3
+hungry = True
+x = 'Feed the bear now!' if hungry else 'do not feed the bear'
 
-# import platform
-
-
-# print("This is python version {}".format(platform.python_version()))
-
-import urllib.request
+print(x)
