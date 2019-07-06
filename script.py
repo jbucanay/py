@@ -1,9 +1,34 @@
-import urllib.request
-import json
-import textwrap
 
-with urllib.request.urlopen('https://newsapi.org/v2/everything?q=bitcoin&from=2019-06-30&sortBy=publishedAt&apiKey=bc1119ab6a4c450fb7230c4c765ac97f') as info:
+from tkinter import *
+from tkinter import ttk
 
-    res = info.read()
-    decod = res.decode('utf-8')
-    print(textwrap.fill(decod))
+
+class HelloApp:
+
+    def __init__(self, master):
+
+        self.label = ttk.Label(master, text="Hello, Tkinter!")
+        self.label.grid(row=0, column=0, columnspan=2)
+
+        ttk.Button(master, text="Texas",
+                   command=self.texas_hello).grid(row=1, column=0)
+
+        ttk.Button(master, text="Hawaii",
+                   command=self.hawaii_hello).grid(row=1, column=1)
+
+    def texas_hello(self):
+        self.label.config(text='Howdy, Tkinter!')
+
+    def hawaii_hello(self):
+        self.label.config(text='Aloha, Tkinter!')
+
+
+def main():
+
+    root = Tk()
+    app = HelloApp(root)
+    root.mainloop()
+
+
+if __name__ == "__main__":
+    main()
